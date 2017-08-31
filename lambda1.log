@@ -1,0 +1,117 @@
+/*
+Daniel Mecca
+CPSC 352 
+SDE 2
+Log File 
+*/
+
+Correct Cases
+./lambda1
+
+-((lambda x.(fun1 x)) 100)
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is a combination
+
+ 
+-(((lambda x.(lambda y.(x y))) fun2) 3)
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is a combination
+
+
+-(lambda x . (lambda y . (lambda z . (fun0 z))))
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is an abstraction
+
+-((fun1 fun2) (fun3 fun4))
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is a combination
+
+-(lambda x . (lambda y . (lambda z .(lambda z . (fun0 z)))))
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is an abstraction
+
+-((((lambda x.(lambda x.(lambda y.(x y)))) fun2) 3) 5)
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is a combination
+
+-(((((lambda y.(lambda x.(lambda x.(lambda y.(x y))))) fun2) 3) 5) fun3)
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is a combination
+
+-(lambda z . (lambda x . (lambda y . (lambda z . (fun0 z)))))
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is an abstraction
+
+-(lambda z .(lambda z . (lambda x . (lambda y . (lambda z . (fun0 z))))))
+
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is an abstraction
+-(lambda t .(lambda z .(lambda z . (lambda x . (lambda y . (lambda z . (fun0 z)))))))
+Parse for syntactically correct lambda-calculus expression was successful:
+
+    The overall expression is an abstraction
+
+Incorrect 
+-(lambda y .(lambda z .(lambda z . (lambda x . (lambda y . (lambda z . (fun0 z))))))(fun1 fun2))
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-((lambda x.(fun1 x)) .x)
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-((lambda x.(fun1 x)) .x))
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-(((lambda x.(lambda y.(x y))) f2) 3)
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-(lambda (x . (fun9 x)))
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-(lambda x . (lambda y . (fun0 z))))
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-(lambda z . (lambda x . (lambda y . (lambda z . (fun0 z))))))
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-(((lambda x.(fun1 x)) 100) .x)
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-(((lambda x.(fun1 x)) fun) .x)
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-((fun1 fun2) (fun1 fun2) (fun3 fun4))
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-((fun1 f2) (fun1 fun2))
+
+Sorry, Charlie: Not everybody can be a lambda expression!
+
+-(lambda x . (lambda y . (lambda fun1 . (fun0 z))))
+
+Sorry, Charlie: Not everybody can be a lambda expression!

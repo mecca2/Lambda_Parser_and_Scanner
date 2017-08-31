@@ -1,0 +1,40 @@
+/*
+Daniel Mecca
+CPSC 352
+SDE 3
+*/
+
+%{
+	#include<stdio.h>
+	#include<stdlib.h>
+	#include "lambda1.tab.h"
+	#define YY_NO_INPUT
+%}
+
+%option noyywrap
+%option nounput
+
+
+variables 	[a-z]+
+number 		[0-9]+
+function 	"fun"[0-9]+
+lambda 		"lambda"
+period 		"."
+whitespace 	[ \t]+
+newline 	[\r\n]+
+
+
+%%
+
+
+"("				{	return LPARENS;		}
+")"				{	return RPARENS;		}
+{lambda} 			{	return LAMBDA;		}
+{period}			{	return PERIOD;		}
+{variables}			{	return VARIABLES;	}
+{function}			{	return FUNCTION;	}
+{number}			{	return INTEGER;		}
+
+
+
+%%
